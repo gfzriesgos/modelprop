@@ -1,8 +1,6 @@
-FROM ubuntu:18.04
+FROM python:3.6.9-buster
 
 ENV DEBIAN_FRONTEND=noninteractive
-
-RUN apt-get update && apt-get install python3 git python3-pip -y
 
 RUN pip3 install pandas
 
