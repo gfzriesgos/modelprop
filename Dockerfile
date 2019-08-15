@@ -4,7 +4,6 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 RUN pip3 install pandas
 
-RUN mkdir -pv /usr/share/git && \
-    cd /usr/share/git && \
-    git clone https://github.com/gfzriesgos/modelprop.git && \
-    mkdir -pv /usr/share/git/modelprop/output/
+WORKDIR /usr/share/git/modelprop
+RUN mkdir output
+COPY . .
